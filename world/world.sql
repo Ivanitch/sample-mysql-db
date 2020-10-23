@@ -32,7 +32,7 @@ USE `world`;
 
 DROP TABLE IF EXISTS `city`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `city` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` char(35) NOT NULL DEFAULT '',
@@ -42,7 +42,7 @@ CREATE TABLE `city` (
   PRIMARY KEY (`id`),
   KEY `country_code` (`country_code`),
   CONSTRAINT `city_ibfk_1` FOREIGN KEY (`country_code`) REFERENCES `country` (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4138,7 +4138,7 @@ commit;
 
 DROP TABLE IF EXISTS `country`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `country` (
   `code` char(3) NOT NULL DEFAULT '',
   `name` char(52) NOT NULL DEFAULT '',
@@ -4156,7 +4156,7 @@ CREATE TABLE `country` (
   `capital` int DEFAULT NULL,
   `code_2` char(2) NOT NULL DEFAULT '',
   PRIMARY KEY (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4412,7 +4412,7 @@ commit;
 
 DROP TABLE IF EXISTS `country_language`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `country_language` (
   `country_code` char(3) NOT NULL DEFAULT '',
   `language` char(30) NOT NULL DEFAULT '',
@@ -4421,7 +4421,7 @@ CREATE TABLE `country_language` (
   PRIMARY KEY (`country_code`,`language`),
   KEY `country_code` (`country_code`),
   CONSTRAINT `country_language_ibfk_1` FOREIGN KEY (`country_code`) REFERENCES `country` (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
