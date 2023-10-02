@@ -1,2 +1,7 @@
 # Учебные базы данных MySQL
-Немного кастомизированные учебные базы данных от разработчиков MySQL: https://dev.mysql.com/doc/index-other.html
+Немного модифицировали базу данных <code>world</code> под [SQL Style Guide](https://www.sqlstyle.guide/ru/)  
+Исходники: <https://dev.mysql.com/doc/index-other.html>
+
+
+
+
